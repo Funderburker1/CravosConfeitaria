@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Italianno&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <!--Link Icons-->
     <script src="https://kit.fontawesome.com/2113f468da.js" crossorigin="anonymous"></script>
@@ -21,7 +21,9 @@
 
 <body>
     <main class="main-content">
-        <div class="backgroundHome"></div>
+        <div class="backgroundHome">
+        </div>
+        <!--Home start-->
         <section id="home" class="section-home">
 
             <header class="header-home">
@@ -35,9 +37,9 @@
                     </div>
                     <ul>
                         <li><a href="#home">Tela Inicial</a></li>
-                        <li>Como Pedir</li>
-                        <li><a href="#shop">Cardapios</a></li>
                         <li><a href="#gallery">Galeria</a></li>
+                        <li><a href="#shop">Cardapios</a></li>
+                        <li><a href="#about">Sobre</a></li>
                         <li>Contato</li>
                     </ul>
                     <nav class="menuMobile">
@@ -86,16 +88,31 @@
 
             </header>
         </section>
+        <!--Home end-->
 
+        <!--Gallery start-->
         <section id="gallery" class="section-gallery">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
                 <path fill="#48312a" fill-opacity="1"
                     d="M0,128L16,149.3C32,171,64,213,96,229.3C128,245,160,235,192,224C224,213,256,203,288,197.3C320,192,352,192,384,181.3C416,171,448,149,480,165.3C512,181,544,235,576,218.7C608,203,640,117,672,112C704,107,736,181,768,202.7C800,224,832,192,864,154.7C896,117,928,75,960,69.3C992,64,1024,96,1056,117.3C1088,139,1120,149,1152,138.7C1184,128,1216,96,1248,96C1280,96,1312,128,1344,144C1376,160,1408,160,1424,160L1440,160L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z">
                 </path>
-            </svg>
-
+            </svg> -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="rgb(139, 33, 33)" fill-opacity="1"
+                    d="M0,288L48,266.7C96,245,192,203,288,192C384,181,480,203,576,208C672,213,768,203,864,197.3C960,192,1056,192,1152,208C1248,224,1344,256,1392,272L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg> -->
+            <div class="fundo" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                    preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M315.18,-26.20 C422.40,41.95 373.30,105.11 560.66,168.27 L500.00,150.00 L500.00,0.00 Z"
+                        style="stroke: none; fill: rgb(139, 33, 33);"></path>
+                </svg></div>
+            <!-- <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M327.03,-201.28 C324.70,191.95 509.31,134.72 569.13,157.41 L549.94,52.80 L500.00,0.00 Z"
+                        style="stroke: none; fill: rgb(139, 33, 33);"></path>
+                </svg></div> -->
             <h2>Galeria de Fotos</h2>
-
             <div class="gallery-content">
                 <div class="box-img">
                     <img src="assets/images/brownie4.jpg" alt="">
@@ -119,18 +136,21 @@
                 </div>
             </div>
         </section>
+        <!--Gallery end-->
 
+        <!--Shop start-->
         <section id="shop" class="section-shop">
-            <h2>Catálago</h2>
+            <h2>Cardapios</h2>
             <nav class="links-shop">
                 <ul>
-                    <li>Cookies</li>
-                    <li>Brownies</li>
-                    <li>Brigadeiros</li>
-                    <li>Bolos</li>
+                    <li class="menu-tab-item active" data-target="#cookie">Cookies</li>
+                    <li class="menu-tab-item " data-target="#brownie">Brownies</li>
+                    <li class="menu-tab-item " data-target="#brigadeiro">Brigadeiros</li>
+                    <li class="menu-tab-item " data-target="#combos">Combos Festas</li>
+                    <li class="menu-tab-item " data-target="#boloDePote">Bolo de Pote</li>
+                    <li class=" "><a href="/dataComemorativa.html">Data Comemorativa</a></li>
                 </ul>
             </nav>
-
 
             <div class="shop-content">
                 <div class="shop-item">
@@ -144,9 +164,91 @@
                 </div>
             </div>
 
-            <div class="shop-container"></div>
+            <div class="shop-container">
+                <div id="cookie" class="scroll shop-container-cookie tab-content active"></div>
+                <div id="brigadeiro" class="scroll shop-container-brigadeiro tab-content"></div>
+                <div id="brownie" class="scroll shop-container-brownie tab-content"></div>
+                <div id="combos" class="scroll shop-container-combos tab-content"></div>
+                <div id="boloDePote" class="scroll shop-container-boloDePote tab-content"></div>
+            </div>
 
         </section>
+        <!--Shop end-->
+
+        <!--About Me start-->
+        <section id="about" class="section-aboutMe">
+            <div class="about">
+                <div class="aboutText">
+                    <h2>Sobre Mim</h2>
+
+                    <div class="row">
+                        <span class="triangulo"></span>
+                        <span class="linha"></span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia, totam consequuntur,
+                        exercitationem error fugit ut excepturi deserunt quam, accusantium est. A consequuntur dolore
+                        sint vitae magnam. Commodi, odio eligendi!
+                    </p>
+                </div>
+                <div class="imgAbout">
+                    <img src="assets/images/masgues.jpg" alt="">
+                </div>
+
+            </div>
+        </section>
+        <!--About Me end-->
+
+        <!--Coments start-->
+        <section class="section-feedback">
+            <h2>Feedbacks dos Clientes</h2>
+            <div class="feedback-container">
+                <div class="feedback-box">
+                    <img src="assets/images/p01.png" alt="">
+                    <span><i class="fa-brands fa-facebook-f"></i>
+                        <h6>João Vitor</h6>
+                    </span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eum iusto placeat facere,
+                        consequatur nam cupiditate quaerat, voluptas error dolore quae blanditiis adipisci. Quisquam,
+                        laboriosam hic molestiae eligendi eaque voluptatem.
+                    </p>
+                </div>
+                <div class="feedback-box">
+                    <img src="assets/images/p02.jpg" alt="">
+                    <span><i class="fa-brands fa-instagram"></i>
+                        <h6>Maria Luiza</h6>
+                    </span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eum iusto placeat facere,
+                        consequatur nam cupiditate quaerat, voluptas error dolore quae blanditiis adipisci. Quisquam,
+                        laboriosam hic molestiae eligendi eaque voluptatem.
+                    </p>
+                </div>
+                <div class="feedback-box">
+                    <img src="assets/images/p03.png" alt="">
+                    <span><i class="fa-brands fa-instagram"></i>
+                        <h6>Bruna</h6>
+                    </span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eum iusto placeat facere,
+                        consequatur nam cupiditate quaerat, voluptas error dolore quae blanditiis adipisci. Quisquam,
+                        laboriosam hic molestiae eligendi eaque voluptatem.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--Coments end-->
+
+        <!--Contact start-->
+        <section class="section-contact">
+
+        </section>
+        <!--Contact end-->
+
+        <footer class="footer">
+
+        </footer>
     </main>
 
     <script src="assets/js/data.js"></script>
